@@ -58,4 +58,4 @@ Claude Code cloud sessions have no `gh` for issues. Use the GitHub MCP tools on 
 - **Read and list**: `issue_read` (`get`, `get_comments`, `get_sub_issues`) and `list_issues`.
 - **Comment**: `add_issue_comment`.
 - **Blocking**: these tools do not expose native dependencies, so use the `Blocked by: #<n>, #<n>` line at the top of the child body.
-- **Labels**: a label that does not exist yet is created the first time it is applied to an issue.
+- **Labels**: `issue_write` creates a missing label when it creates or updates a plain issue, but fails with "label not found" when `parent_issue_number` is set. To add a new label, apply it once to an existing issue with an `update`, then use it freely.
