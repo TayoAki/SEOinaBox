@@ -130,8 +130,7 @@ Selling this needs a signed agreement with CopilotKit that names resale or hosti
 - Two single-user deployments on one Composio or Arcade key once shared connections, which is why each now gets its own broker identity. `docs/configuration.md:474-482`. A separate broker project per client avoids the question.
 
 **The website says more than the repository shows**
-- "Multi-tenancy" and "Isolate each customer’s data in its own tenant, with its own settings and access controls, while super-admins oversee them all." https://open.bot/business (same text on https://open.bot)
-- "Set daily, weekly, and monthly token limits per tenant and per person, and see spend for every tenant." https://open.bot/business
+- "Multi-tenancy" and "Isolate each customer’s data in its own tenant, with its own settings and access controls, while super-admins oversee them all." Also "Set daily, weekly, and monthly token limits per tenant and per person, and see spend for every tenant." https://open.bot/business (same text on https://open.bot)
 - The repository has no "super-admin" and no tenant in the API spec. Whether this is shipped, planned, or only in OpenBot for Business or OpenBot Cloud is silent.
 
 **Our own build** (not in the docs): provisioning and upgrading a fleet of per-client deployments; any view or admin across clients; client billing and metering; per-client branding beyond a name and theme variables; any isolation between clients inside one deployment.
@@ -219,8 +218,7 @@ Selling this needs a signed agreement with CopilotKit that names resale or hosti
 - Routines have "A 15-minute floor and a cap of 20 enabled routines", and "ten failures in a row switch a routine off rather than burn model spend forever". `README.md:400`. A Bot handing work to another "is a whole agent turn at the other end". `docs/architecture.md:281-285`
 
 **Compute**
-- The sizes in section 3. Browsers dominate memory: up to 8 at once per computer by default, closed after 30 idle minutes. `docs/configuration.md:837-839`. Sandbox computers are "suspended when idle and resumed". `prompt.txt:279-280`
-- Staged attachments can reach "256 MiB of staged blobs per person". `docs/deployment.md:100-103`
+- The sizes in section 3. Browsers dominate memory: up to 8 at once per computer by default, closed after 30 idle minutes. `docs/configuration.md:837-839`. Sandbox computers are "suspended when idle and resumed". `prompt.txt:279-280`. Staged attachments can reach "256 MiB of staged blobs per person". `docs/deployment.md:100-103`
 - Railway rates, if used: RAM "$10 / GB / month", CPU "$20 / vCPU / month", volume storage "$0.15 / GB / month", egress "$0.05 / GB"; Hobby "$5 / month", Pro "$20 / month". https://docs.railway.com/pricing/plans
 
 ## Ask CopilotKit in writing
@@ -248,5 +246,4 @@ Selling this needs a signed agreement with CopilotKit that names resale or hosti
 - Behaviour described in `docs/` against the compiled `main` images: the docs still cite `server/src/...` paths that are gone (for example `docs/architecture.md:81`).
 - Railway in practice: nothing was deployed. Unchecked in particular is whether a Railway start command replaces the image's `/init` entrypoint, which the one-off sweeps need (`docs/deployment.md:186-194`).
 - Dependency licences (`bun.lock`), the bundled Bitnami and embeddings images, and Composio or Arcade terms: not reviewed.
-- GitHub issues, discussions and the releases page: the GitHub API for this repository was not available in this session; I used git and the registry instead.
-- CopilotKit's privacy policy, data-processing addendum and support terms: not read in full.
+- GitHub issues, discussions and the releases page: the GitHub API for this repository was not available in this session; I used git and the registry instead. CopilotKit's privacy policy, data-processing addendum and support terms were not read in full.
