@@ -1,0 +1,3 @@
+# The Workbench is a skin in a fork of OpenBot's frontend
+
+We fork OpenBot's frontend and add the Workbench as a skin of our own, the mechanism OpenBot provides for replacing the frame around every page, instead of building a separate frontend or rewriting OpenBot's stock shell. A separate frontend would have to re-own the Conversation, the Bot's computer tools and Approvals against an API that is almost entirely unspecified, and rewriting the stock shell would collide with files OpenBot is itself redesigning. The Workbench is the only look we ship, and v1 keeps OpenBot's own Settings and Admin screens, because a skin does not wrap them.
